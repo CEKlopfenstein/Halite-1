@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="UzLAOvN92N2iaw_7HcFXSOc_M-WIe3KFXaozuaNsZo4" />
+
+    <title>About</title>
+
+    <link href="lib/bootstrap.min.css" rel="stylesheet">
+    <link href="style/general.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default" id="navvy">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" style="padding: 10px" href="index.php.html"><img src="assets/full_logo.png" style="height: 100%;"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right loggedOut" id="loginNav">
+                <ul class="nav navbar-nav">
+                    <li>
+  <a href="basics_quickstart.php.html">Learn</a>
+</li>
+<li>
+  <a href="downloads.php.html">Download</a>
+</li>
+<li>
+  <a href="leaderboard.php.html">Rankings</a>
+</li>
+<li>
+    <a href="local_visualizer.php.html">Visualize</a>
+</li>
+<li>
+  <a href="http://2016.forums.halite.io">Forums</a>
+</li>
+<li>
+  <a href="about.php.html">About</a>
+</li>                    <li>
+                      <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=2b713362b2f331e1dde3">Login with Github</a>
+                    </li>
+                </ul>
+            </ul>
+            <form id="submitForm">
+                <ul class="nav navbar-nav navbar-right loggedIn" id="logoutNav">
+                    <li>
+  <a href="basics_quickstart.php.html">Learn</a>
+</li>
+<li>
+  <a href="downloads.php.html">Download</a>
+</li>
+<li>
+  <a href="leaderboard.php.html">Rankings</a>
+</li>
+<li>
+    <a href="local_visualizer.php.html">Visualize</a>
+</li>
+<li>
+  <a href="http://2016.forums.halite.io">Forums</a>
+</li>
+<li>
+  <a href="about.php.html">About</a>
+</li>                                        <li><a href="about.php.html#" id="submitButton">Submit</a><input type="file" id="myFile" name="botFile"></li>
+                                        <li><a href="about.php.html#" id="logoutButton">Logout</a></li>
+                    <li><a href="associate.php.html">Associate</a></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div id="messageBox"></div>
+
+<div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="myModalLabel">Halite Submission Instructions</h1>
+            </div>
+            <div class="modal-body">
+                <h3>Name your main file <b>MyBot</b> with an appropriate file extension (e.g. MyBot.java).</h3>
+                <h3>Make sure that you aren't using stdout or stdin (print, cout, System.out.print, etc), which will cause your bot to fail. Instead, use <a href="advanced_development.php.html">a log file</a>.</h3>
+                <h3>Upload a <b>zip file</b> of your source code.</h3>
+                <h3>Once we have compiled your code, you will get an email notification.</h3>
+                <button id="submitModalButton" type="button" class="btn btn-primary">Submit!</button>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>About Halite</h1>
+
+                <p><a href="https://2016.halite.io/">Halite</a> is a programming game where players build smart bots that battle head-to-head with the goal of taking over the largest share of a virtual grid. Bots use their strength to gain territory, and their territory to gain strength—outmaneuvering opponents based on the relative sophistication of their code.</p>
+
+                <p><i>The general who wins the battle makes many calculations in his temple before the battle is fought –Sun Tzu</i></p>
+
+                <p>Halite is designed for all levels of coding enthusiasts—from high school students to senior engineers. The simplest Halite bot requires only 10 lines of code, but bots can get ever more advanced. Players may find themselves surprised: we’ve learned from thousands of hours of gameplay that it’s not always the most complicated algorithm that wins. Creativity and insight are highly rewarded! So code well — a bot’s fate depends on it.</p>
+
+                <p>Halite was conceived of and developed by <a href="https://github.com/Sydriax">Benjamin Spector</a> and <a href="https://github.com/truell20">Michael Truell</a>. Ben largely wrote the game implementation and starter packages, while Michael was primarily responsible for the website and the competition backend infrastructure. After receiving positive feedback on the Halite, the pair continually revised the game, extended it into the cloud and developed additional execution, leaderboard, and web interface capabilities.</p>
+
+                <p><a href="https://www.twosigma.com/">Two Sigma</a>, having had a history of playful programming challenges for its mathematical and software-oriented teams (e.g., see the <a href="https://www.youtube.com/watch?v=oxAPXN5UKa8">Robotic Air Hockey Competition</a>) retained Ben and Michael as 2016 summer interns to further develop Halite and then run an internal Halite Challenge. The team incorporated feedback from many, and about thirty-five players competed in a successful 3-week tournament in August.</p>
+
+                <p>At the end of the tournament, however, the Halite bots were not happy with being cashiered, and the winning bot used its AI capabilities to influence its human friends. Swayed by the power of this bot’s logic, Two Sigma then decided to offer Halite to human and non-human coding enthusiasts worldwide for a one-time, three-month competition… fearing unintended consequences from a longer release.</p>
+
+                <p>To help productize and orchestrate the public launch, Two Sigma reached out to <a href="http://tech.cornell.edu/">Cornell Tech</a>, a leader in graduate tech education. With a shared interest in encouraging programming, entrepreneurship, and growth of the thriving New York tech scene, the two partners initiated the public Halite competition in November 2016. Cornell Tech is providing ongoing game support and community management, and by working closely with the online gaming community, it will empower players to collaborate, learn and have fun.</p>
+
+                <p>Many have contributed to Halite beyond Ben’s and Michael’s invention and engineering; they include Jaques Clapauch, Eric Abrego, Matt Adereth, Trammel Hudson, Emily Malloy, Arnaud Sahuguet, and Scott Spinner. And, no doubt, much credit should also be provided to users who are sending questions and comments to the <a href="http://2016.forums.halite.io">forums</a>.</p>
+
+                <p>May the best bot win!</p>
+
+            </div>
+        </div>
+        
+
+<div align="center" style="bottom: 0; left: 0; right: 0; height: 50px;">
+  <hr/>
+  <a href="http://localhost:8080/terms_of_service.php">Terms of Service</a>
+|
+  <a href="http://localhost:8080/privacy_policy.php">Privacy Policy</a>
+</div>    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="script/backend.js"></script>
+    <script src="script/general.js"></script>
+</body>
+</html>

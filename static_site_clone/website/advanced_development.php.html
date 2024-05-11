@@ -1,0 +1,241 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="UzLAOvN92N2iaw_7HcFXSOc_M-WIe3KFXaozuaNsZo4" />
+
+    <title>Best Practices</title>
+
+    <link href="lib/bootstrap.min.css" rel="stylesheet">
+    <link href="style/general.css" rel="stylesheet">
+    <link href="style/learn.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default" id="navvy">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" style="padding: 10px" href="index.php.html"><img src="assets/full_logo.png" style="height: 100%;"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right loggedOut" id="loginNav">
+                <ul class="nav navbar-nav">
+                    <li>
+  <a href="basics_quickstart.php.html">Learn</a>
+</li>
+<li>
+  <a href="downloads.php.html">Download</a>
+</li>
+<li>
+  <a href="leaderboard.php.html">Rankings</a>
+</li>
+<li>
+    <a href="local_visualizer.php.html">Visualize</a>
+</li>
+<li>
+  <a href="http://2016.forums.halite.io">Forums</a>
+</li>
+<li>
+  <a href="about.php.html">About</a>
+</li>                    <li>
+                      <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=2b713362b2f331e1dde3">Login with Github</a>
+                    </li>
+                </ul>
+            </ul>
+            <form id="submitForm">
+                <ul class="nav navbar-nav navbar-right loggedIn" id="logoutNav">
+                    <li>
+  <a href="basics_quickstart.php.html">Learn</a>
+</li>
+<li>
+  <a href="downloads.php.html">Download</a>
+</li>
+<li>
+  <a href="leaderboard.php.html">Rankings</a>
+</li>
+<li>
+    <a href="local_visualizer.php.html">Visualize</a>
+</li>
+<li>
+  <a href="http://2016.forums.halite.io">Forums</a>
+</li>
+<li>
+  <a href="about.php.html">About</a>
+</li>                                        <li><a href="advanced_development.php.html#" id="submitButton">Submit</a><input type="file" id="myFile" name="botFile"></li>
+                                        <li><a href="advanced_development.php.html#" id="logoutButton">Logout</a></li>
+                    <li><a href="associate.php.html">Associate</a></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div id="messageBox"></div>
+
+<div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="myModalLabel">Halite Submission Instructions</h1>
+            </div>
+            <div class="modal-body">
+                <h3>Name your main file <b>MyBot</b> with an appropriate file extension (e.g. MyBot.java).</h3>
+                <h3>Make sure that you aren't using stdout or stdin (print, cout, System.out.print, etc), which will cause your bot to fail. Instead, use <a href="advanced_development.php.html">a log file</a>.</h3>
+                <h3>Upload a <b>zip file</b> of your source code.</h3>
+                <h3>Once we have compiled your code, you will get an email notification.</h3>
+                <button id="submitModalButton" type="button" class="btn btn-primary">Submit!</button>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="row">
+            <style>
+    /* sidebar */
+    .bs-docs-sidebar {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .bs-docs-sidebar .nav>li>span {
+        color: #63ceca;
+    }
+
+    .bs-docs-sidebar .nav>li>span,
+    .bs-docs-sidebar .nav>li>a { border-left: 2px solid transparent;
+        padding: 4px 20px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    /* nested links */
+    .bs-docs-sidebar .nav .nav>li>a {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 30px;
+        font-size: 12px;
+    }
+
+    /* active & hover links */
+    .bs-docs-sidebar .nav>.active>a, 
+    .bs-docs-sidebar .nav>li>a:hover, 
+    .bs-docs-sidebar .nav>li>a:focus {
+        text-decoration: none;          
+        background-color: transparent;  
+    }
+
+    /* nested active links */
+    .bs-docs-sidebar .nav .nav>.active>a, 
+    .bs-docs-sidebar .nav .nav>.active:hover>a,
+    .bs-docs-sidebar .nav .nav>.active:focus>a {
+        font-weight: 700;
+        border-left-color: #63ceca; 
+        font-weight: 500;
+    }
+
+</style>
+
+<nav class="col-sm-3 bs-docs-sidebar">
+    <ul id="sidebar" class="nav nav-stacked">
+        <li class="">
+            <span>Basics</span>
+            <ul class="nav nav-stacked">
+                <li id="basics_quickstart">
+                    <a href="basics_quickstart.php.html">Getting Started</a>
+                </li>
+                <li id="basics_intro_halite">
+                    <a href="basics_intro_halite.php.html">Introducing Halite</a>
+                </li>
+                <li id="basics_improve_random">
+                    <a href="basics_improve_random.php.html">Improving the Random Bot</a>
+                </li>
+                <li id="basics_faqs">
+                    <a href="basics_faqs.php.html">FAQs</a>
+                </li>
+            </ul>
+        </li>
+        <li class="">
+            <span>Rules</span>
+            <ul class="nav nav-stacked">
+                <li id="rules_game">
+                    <a href="rules_game.php.html">Game Rules</a>
+                </li>
+                <li id="rules_contest">
+                    <a href="rules_contest.php.html">Contest Rules</a>
+                </li>
+            </ul>
+        </li>
+        <li class="">
+            <span>Advanced</span>
+            <ul class="nav nav-stacked">
+                <li id="advanced_development">
+                    <a href="advanced_development.php.html">Best Practices</a>
+                </li>
+                <li id="advanced_libraries">
+                    <a href="advanced_libraries.php.html">Submitting A Bot</a>
+                </li>
+                <li id="advanced_third_party">
+                    <a href="advanced_third_party.php.html">Third Party Resources</a>
+                </li>
+                <li id="advanced_writing_sp">
+                    <a href="advanced_writing_sp.php.html">Writing Your Own Starter Package</a>
+                </li>
+                <li id="advanced_command_line">
+                    <a href="advanced_command_line.php.html">Halite Environment CLI</a>
+                </li>
+                <li id="advanced_replay_file">
+                    <a href="advanced_replay_file.php.html">Replay Files</a>
+                </li>
+                <li id="advanced_game_server">
+                    <a href="advanced_game_server.php.html">Game Servers</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+    <p style="line-height: 1.5em; font-size: 13px;">You can <a id="githubLink" href="advanced_development.php.html">edit this content on GitHub</a> and send us a pull request!</p>
+</nav>
+
+<script>
+    var fileName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+    document.getElementById("githubLink").href = "https://github.com/HaliteChallenge/Halite/blob/master/website/"+fileName;
+
+    var name = fileName.split(".")[0];
+    document.getElementById(name).className = "active";
+</script>
+            <div class="col-sm-9">
+                <h1>Best Practices</h1>
+                <p>In this guide, we will list a couple of simple, useful practices to follow when building your Halite bot.</p>
+                <h3>Using a Log File</h3>
+                <p>Stdout and stdin in are used to communicate with the game environment. As such, you cannot use functions like <code>System.out.println</code>, <code>print()</code>, or <code>std::cout</code>. Instead, print debugging information to a log file.</p>
+                <h3>Local Bot Evaluation</h3>
+                <p>Before submitting a new bot to the online leaderboard, we recommend running some games against the version of your bot that is currently on the leaderboard. If your new bot consistently wins, then put it up!</p>
+                <h3>Disabling the Timeout Flag</h3>
+                <p>When debugging latency issues with your bot, it can be helpful to disable game environment timeouts. To do so, append the <code>-t</code> flag to your environment command (e.g. <code>./environment -d "30 30" "python3 MyBot.py" "python3 RandomBot.py" -t</code>).</p>
+                <h3>Debugging with an IDE</h3>
+                <p>There is a community contributed method for running a Halite bot from a custom debugger locally. More on this can be found <a href="http://2016.forums.halite.io/t/running-your-halite-bot-from-a-debugger/70">here on the forums</a>. </p>
+            </div>
+        </div>
+        
+
+<div align="center" style="bottom: 0; left: 0; right: 0; height: 50px;">
+  <hr/>
+  <a href="http://localhost:8080/terms_of_service.php">Terms of Service</a>
+|
+  <a href="http://localhost:8080/privacy_policy.php">Privacy Policy</a>
+</div>    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="script/backend.js"></script>
+    <script src="script/general.js"></script>
+</body>
+</html>

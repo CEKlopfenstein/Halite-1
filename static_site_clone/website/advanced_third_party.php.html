@@ -1,0 +1,278 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="UzLAOvN92N2iaw_7HcFXSOc_M-WIe3KFXaozuaNsZo4" />
+
+    <title>Third Party Resources</title>
+
+    <link href="lib/bootstrap.min.css" rel="stylesheet">
+    <link href="style/general.css" rel="stylesheet">
+    <link href="style/learn.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default" id="navvy">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" style="padding: 10px" href="index.php.html"><img src="assets/full_logo.png" style="height: 100%;"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right loggedOut" id="loginNav">
+                <ul class="nav navbar-nav">
+                    <li>
+  <a href="basics_quickstart.php.html">Learn</a>
+</li>
+<li>
+  <a href="downloads.php.html">Download</a>
+</li>
+<li>
+  <a href="leaderboard.php.html">Rankings</a>
+</li>
+<li>
+    <a href="local_visualizer.php.html">Visualize</a>
+</li>
+<li>
+  <a href="http://2016.forums.halite.io">Forums</a>
+</li>
+<li>
+  <a href="about.php.html">About</a>
+</li>                    <li>
+                      <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=2b713362b2f331e1dde3">Login with Github</a>
+                    </li>
+                </ul>
+            </ul>
+            <form id="submitForm">
+                <ul class="nav navbar-nav navbar-right loggedIn" id="logoutNav">
+                    <li>
+  <a href="basics_quickstart.php.html">Learn</a>
+</li>
+<li>
+  <a href="downloads.php.html">Download</a>
+</li>
+<li>
+  <a href="leaderboard.php.html">Rankings</a>
+</li>
+<li>
+    <a href="local_visualizer.php.html">Visualize</a>
+</li>
+<li>
+  <a href="http://2016.forums.halite.io">Forums</a>
+</li>
+<li>
+  <a href="about.php.html">About</a>
+</li>                                        <li><a href="advanced_third_party.php.html#" id="submitButton">Submit</a><input type="file" id="myFile" name="botFile"></li>
+                                        <li><a href="advanced_third_party.php.html#" id="logoutButton">Logout</a></li>
+                    <li><a href="associate.php.html">Associate</a></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div id="messageBox"></div>
+
+<div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="myModalLabel">Halite Submission Instructions</h1>
+            </div>
+            <div class="modal-body">
+                <h3>Name your main file <b>MyBot</b> with an appropriate file extension (e.g. MyBot.java).</h3>
+                <h3>Make sure that you aren't using stdout or stdin (print, cout, System.out.print, etc), which will cause your bot to fail. Instead, use <a href="advanced_development.php.html">a log file</a>.</h3>
+                <h3>Upload a <b>zip file</b> of your source code.</h3>
+                <h3>Once we have compiled your code, you will get an email notification.</h3>
+                <button id="submitModalButton" type="button" class="btn btn-primary">Submit!</button>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="row">
+            <style>
+    /* sidebar */
+    .bs-docs-sidebar {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .bs-docs-sidebar .nav>li>span {
+        color: #63ceca;
+    }
+
+    .bs-docs-sidebar .nav>li>span,
+    .bs-docs-sidebar .nav>li>a { border-left: 2px solid transparent;
+        padding: 4px 20px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    /* nested links */
+    .bs-docs-sidebar .nav .nav>li>a {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 30px;
+        font-size: 12px;
+    }
+
+    /* active & hover links */
+    .bs-docs-sidebar .nav>.active>a, 
+    .bs-docs-sidebar .nav>li>a:hover, 
+    .bs-docs-sidebar .nav>li>a:focus {
+        text-decoration: none;          
+        background-color: transparent;  
+    }
+
+    /* nested active links */
+    .bs-docs-sidebar .nav .nav>.active>a, 
+    .bs-docs-sidebar .nav .nav>.active:hover>a,
+    .bs-docs-sidebar .nav .nav>.active:focus>a {
+        font-weight: 700;
+        border-left-color: #63ceca; 
+        font-weight: 500;
+    }
+
+</style>
+
+<nav class="col-sm-3 bs-docs-sidebar">
+    <ul id="sidebar" class="nav nav-stacked">
+        <li class="">
+            <span>Basics</span>
+            <ul class="nav nav-stacked">
+                <li id="basics_quickstart">
+                    <a href="basics_quickstart.php.html">Getting Started</a>
+                </li>
+                <li id="basics_intro_halite">
+                    <a href="basics_intro_halite.php.html">Introducing Halite</a>
+                </li>
+                <li id="basics_improve_random">
+                    <a href="basics_improve_random.php.html">Improving the Random Bot</a>
+                </li>
+                <li id="basics_faqs">
+                    <a href="basics_faqs.php.html">FAQs</a>
+                </li>
+            </ul>
+        </li>
+        <li class="">
+            <span>Rules</span>
+            <ul class="nav nav-stacked">
+                <li id="rules_game">
+                    <a href="rules_game.php.html">Game Rules</a>
+                </li>
+                <li id="rules_contest">
+                    <a href="rules_contest.php.html">Contest Rules</a>
+                </li>
+            </ul>
+        </li>
+        <li class="">
+            <span>Advanced</span>
+            <ul class="nav nav-stacked">
+                <li id="advanced_development">
+                    <a href="advanced_development.php.html">Best Practices</a>
+                </li>
+                <li id="advanced_libraries">
+                    <a href="advanced_libraries.php.html">Submitting A Bot</a>
+                </li>
+                <li id="advanced_third_party">
+                    <a href="advanced_third_party.php.html">Third Party Resources</a>
+                </li>
+                <li id="advanced_writing_sp">
+                    <a href="advanced_writing_sp.php.html">Writing Your Own Starter Package</a>
+                </li>
+                <li id="advanced_command_line">
+                    <a href="advanced_command_line.php.html">Halite Environment CLI</a>
+                </li>
+                <li id="advanced_replay_file">
+                    <a href="advanced_replay_file.php.html">Replay Files</a>
+                </li>
+                <li id="advanced_game_server">
+                    <a href="advanced_game_server.php.html">Game Servers</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+    <p style="line-height: 1.5em; font-size: 13px;">You can <a id="githubLink" href="advanced_third_party.php.html">edit this content on GitHub</a> and send us a pull request!</p>
+</nav>
+
+<script>
+    var fileName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+    document.getElementById("githubLink").href = "https://github.com/HaliteChallenge/Halite/blob/master/website/"+fileName;
+
+    var name = fileName.split(".")[0];
+    document.getElementById(name).className = "active";
+</script>
+            <div class="col-sm-9">
+                <h1>Third Party Resources</h1>
+
+                <p>Below is a list of useful and/or fun resources that were created by the Halite community. Especially popular resources will be <span class="glyphicon glyphicon-star" aria-hidden="true"></span>'ed.</p>
+
+                <h3>Tutorials</h3>
+                <ul>
+                   <li><a href="http://2016.forums.halite.io/t/ml-starter-bot-tutorial/616">Machine Learning Starter Bot by brianvanleeuwen</a> <span class="glyphicon glyphicon-star" aria-hidden="true"></span></li> 
+                   <li><a href="http://2016.forums.halite.io/t/running-your-halite-bot-from-an-ide/70">Running Your Halite Bot from an IDE by the Halite team</a></li> 
+                   <li><a href="http://2016.forums.halite.io/t/so-youve-improved-the-random-bot-now-what/482">So you've Improved the Random Bot. Now what? by nmalaguti</a> <span class="glyphicon glyphicon-star" aria-hidden="true"></span></li>
+                   <li><a href="http://2016.forums.halite.io/t/building-a-good-ml-bot/776">Building a Good Machine Learning Bot by KalraA</a></li>
+                </ul>
+
+                <h3>Strategy Writeups</h3>
+                <ul>
+                   <li><a href="http://2016.forums.halite.io/t/early-mid-and-late-game/703">Early, Mid, and Late Game Strategy by nmalaguti</a> <span class="glyphicon glyphicon-star" aria-hidden="true"></span></li> 
+                   <li><a href="http://2016.forums.halite.io/t/how-your-starting-position-impacts-your-bots-performance/769">How Your Starting Position Impacts Your Bot's Performance by nmalaguti</a></li> 
+                   <li><a href="http://2016.forums.halite.io/t/perimeter-optimization-during-expansion/723">Perimeter Optimization by Sydriax</a></li> 
+                </ul>
+
+                <h3>Tools</h3>
+                <ul>
+                   <li><a href="http://2016.forums.halite.io/t/cloudbots-compete-on-demand-against-some-of-my-bots/725">Cloudbots: locally test your bot against nmalaguti's</a></li> 
+                   <li><a href="http://2016.forums.halite.io/t/halite-swig-wrapper-for-the-game-engine/550">Environment: halite environment SWIG wrapper</a></li> 
+                   <li><a href="http://2016.forums.halite.io/t/unofficial-halite-engine-clone-reloader/582">Environment: multi-featured game environment clone</a></li> 
+                   <li><a href="http://2016.forums.halite.io/t/unofficial-match-manager-for-local-testing/505">Local tournament manager</a> <span class="glyphicon glyphicon-star" aria-hidden="true"></span></li> 
+                   <li><a href="http://2016.forums.halite.io/t/visualizer-with-more-graphs-aka-experimental-visualizer/771">Visualizer: web visualizer with aws s3 hosting, extra stats, and easy linking</a> <span class="glyphicon glyphicon-star" aria-hidden="true"></span></li> 
+                   <li><a href="http://2016.forums.halite.io/t/a-stand-alone-game-viewer/615">Visualizer: local 3D visualizer</a></li> 
+                   <li><a href="http://2016.forums.halite.io/t/auto-visualization-of-test-runs/422">Visualizer: local auto-reloading visualizer</a></li> 
+                   <li><a href="https://github.com/erdman/halint">Halint: load in replays and analyse gameplay for obvious mistakes</a></li> 
+                </ul>
+
+                <h3>Mini Competitions</h3>
+                <ul>
+                <li><a href="http://2016.forums.halite.io/t/introducing-unofficial-halite-single-player-mode/573">Single player expansion competition</a> <span class="glyphicon glyphicon-star" aria-hidden="true"></span></li> 
+                </ul>
+
+                <h3>Alternate Starter Packages</h3>
+                <ul>
+                   <li><a href="http://2016.forums.halite.io/t/slightly-more-powerful-c-starter-package/767">C#: more powerful starter package</a></li> 
+                   <li><a href="http://2016.forums.halite.io/t/python3-much-alternative-starter-kit-asyncio-based-timeout-management-etc/611">Python: asyncio timeout-based starter package</a></li> 
+                   <li><a href="http://2016.forums.halite.io/t/distributed-evolutionary-algorithm-deap-starter/624">Python: Distributed Evolutionary Algorithm (DEAP) starter package</a></li> 
+                   <li><a href="http://2016.forums.halite.io/t/python3-numpy-focused-all-i-want-is-matrices-starter-kit/766">Python: numpy matrix oriented starter package</a></li> 
+                </ul>
+
+                <h3>Replay File Dumps</h3>
+                <ul>
+                   <li><a href="http://2016.forums.halite.io/t/diamond-replay-dump/749">December 22, 1583 replays of diamond tier bots</a></li> 
+                   <li><a href="http://2016.forums.halite.io/t/2gb-hlt-files-to-train-on/569">December 1, 5GB of @erdman, @djma, and @daniel-shields</a></li> 
+                </ul>
+            </div>
+        </div>
+        
+
+<div align="center" style="bottom: 0; left: 0; right: 0; height: 50px;">
+  <hr/>
+  <a href="http://localhost:8080/terms_of_service.php">Terms of Service</a>
+|
+  <a href="http://localhost:8080/privacy_policy.php">Privacy Policy</a>
+</div>    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="script/backend.js"></script>
+    <script src="script/general.js"></script>
+</body>
+</html>

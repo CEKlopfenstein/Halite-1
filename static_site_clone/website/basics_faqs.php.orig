@@ -1,0 +1,293 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="UzLAOvN92N2iaw_7HcFXSOc_M-WIe3KFXaozuaNsZo4" />
+
+    <title>FAQs</title>
+
+    <link href="lib/bootstrap.min.css" rel="stylesheet">
+    <link href="style/general.css" rel="stylesheet">
+    <link href="style/learn.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default" id="navvy">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" style="padding: 10px" href="index.php"><img src="assets/full_logo.png" style="height: 100%;"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right loggedOut" id="loginNav">
+                <ul class="nav navbar-nav">
+                    <li>
+  <a href="basics_quickstart.php">Learn</a>
+</li>
+<li>
+  <a href="downloads.php">Download</a>
+</li>
+<li>
+  <a href="leaderboard.php">Rankings</a>
+</li>
+<li>
+    <a href="local_visualizer.php">Visualize</a>
+</li>
+<li>
+  <a href="http://2016.forums.halite.io">Forums</a>
+</li>
+<li>
+  <a href="about.php">About</a>
+</li>                    <li>
+                      <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=2b713362b2f331e1dde3">Login with Github</a>
+                    </li>
+                </ul>
+            </ul>
+            <form id="submitForm">
+                <ul class="nav navbar-nav navbar-right loggedIn" id="logoutNav">
+                    <li>
+  <a href="basics_quickstart.php">Learn</a>
+</li>
+<li>
+  <a href="downloads.php">Download</a>
+</li>
+<li>
+  <a href="leaderboard.php">Rankings</a>
+</li>
+<li>
+    <a href="local_visualizer.php">Visualize</a>
+</li>
+<li>
+  <a href="http://2016.forums.halite.io">Forums</a>
+</li>
+<li>
+  <a href="about.php">About</a>
+</li>                                        <li><a href="#" id="submitButton">Submit</a><input type="file" id="myFile" name="botFile"></li>
+                                        <li><a href="#" id="logoutButton">Logout</a></li>
+                    <li><a href="associate.php">Associate</a></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div id="messageBox"></div>
+
+<div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="myModalLabel">Halite Submission Instructions</h1>
+            </div>
+            <div class="modal-body">
+                <h3>Name your main file <b>MyBot</b> with an appropriate file extension (e.g. MyBot.java).</h3>
+                <h3>Make sure that you aren't using stdout or stdin (print, cout, System.out.print, etc), which will cause your bot to fail. Instead, use <a href="advanced_development.php">a log file</a>.</h3>
+                <h3>Upload a <b>zip file</b> of your source code.</h3>
+                <h3>Once we have compiled your code, you will get an email notification.</h3>
+                <button id="submitModalButton" type="button" class="btn btn-primary">Submit!</button>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="row">
+            <style>
+    /* sidebar */
+    .bs-docs-sidebar {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .bs-docs-sidebar .nav>li>span {
+        color: #63ceca;
+    }
+
+    .bs-docs-sidebar .nav>li>span,
+    .bs-docs-sidebar .nav>li>a { border-left: 2px solid transparent;
+        padding: 4px 20px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    /* nested links */
+    .bs-docs-sidebar .nav .nav>li>a {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 30px;
+        font-size: 12px;
+    }
+
+    /* active & hover links */
+    .bs-docs-sidebar .nav>.active>a, 
+    .bs-docs-sidebar .nav>li>a:hover, 
+    .bs-docs-sidebar .nav>li>a:focus {
+        text-decoration: none;          
+        background-color: transparent;  
+    }
+
+    /* nested active links */
+    .bs-docs-sidebar .nav .nav>.active>a, 
+    .bs-docs-sidebar .nav .nav>.active:hover>a,
+    .bs-docs-sidebar .nav .nav>.active:focus>a {
+        font-weight: 700;
+        border-left-color: #63ceca; 
+        font-weight: 500;
+    }
+
+</style>
+
+<nav class="col-sm-3 bs-docs-sidebar">
+    <ul id="sidebar" class="nav nav-stacked">
+        <li class="">
+            <span>Basics</span>
+            <ul class="nav nav-stacked">
+                <li id="basics_quickstart">
+                    <a href="basics_quickstart.php">Getting Started</a>
+                </li>
+                <li id="basics_intro_halite">
+                    <a href="basics_intro_halite.php">Introducing Halite</a>
+                </li>
+                <li id="basics_improve_random">
+                    <a href="basics_improve_random.php">Improving the Random Bot</a>
+                </li>
+                <li id="basics_faqs">
+                    <a href="basics_faqs.php">FAQs</a>
+                </li>
+            </ul>
+        </li>
+        <li class="">
+            <span>Rules</span>
+            <ul class="nav nav-stacked">
+                <li id="rules_game">
+                    <a href="rules_game.php">Game Rules</a>
+                </li>
+                <li id="rules_contest">
+                    <a href="rules_contest.php">Contest Rules</a>
+                </li>
+            </ul>
+        </li>
+        <li class="">
+            <span>Advanced</span>
+            <ul class="nav nav-stacked">
+                <li id="advanced_development">
+                    <a href="advanced_development.php">Best Practices</a>
+                </li>
+                <li id="advanced_libraries">
+                    <a href="advanced_libraries.php">Submitting A Bot</a>
+                </li>
+                <li id="advanced_third_party">
+                    <a href="advanced_third_party.php">Third Party Resources</a>
+                </li>
+                <li id="advanced_writing_sp">
+                    <a href="advanced_writing_sp.php">Writing Your Own Starter Package</a>
+                </li>
+                <li id="advanced_command_line">
+                    <a href="advanced_command_line.php">Halite Environment CLI</a>
+                </li>
+                <li id="advanced_replay_file">
+                    <a href="advanced_replay_file.php">Replay Files</a>
+                </li>
+                <li id="advanced_game_server">
+                    <a href="advanced_game_server.php">Game Servers</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+    <p style="line-height: 1.5em; font-size: 13px;">You can <a id="githubLink" href="">edit this content on GitHub</a> and send us a pull request!</p>
+</nav>
+
+<script>
+    var fileName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+    document.getElementById("githubLink").href = "https://github.com/HaliteChallenge/Halite/blob/master/website/"+fileName;
+
+    var name = fileName.split(".")[0];
+    document.getElementById(name).className = "active";
+</script>
+            <div class="col-sm-9">
+            <h1>Frequently Asked Questions</h1>
+        
+                <h2>About</h2>
+        
+                <h3>What is Halite?</h3>
+                <p>Halite (the game) is a multiplayer turn-based strategy game played on a rectangular grid; the objective of the game is to take over the entire grid and eliminate the other players in the game.<br>Halite (the tournament) is an online programming competition where human coders write bots that play the Halite game against each other.</p>
+
+                <h3>Where does the game come from? Who invented it?</h3>
+                <p>The Halite game was created by <a href="https://github.com/Sydriax">Benjamin Spector</a> and <a href="https://github.com/truell20">Michael Truell</a> during a summer internship at Two Sigma in 2016.<br>The game format is inspired by the 2011 Ants AI Challenge sponsored by Google.</p>
+
+                <h3>Why did you invent it?</h3>
+                <p>Halite’s creators heard about the Ants AI Challenge a few years too late :-(<br>They couldn’t find any other competitions quite like it, so they decided to create one.</p>
+
+                <h2>About the Tournament</h2>
+
+                <h3>What's the goal of the competition?</h3> 
+                <p>The goal of Halite is to provide a fun and deep testbed to try new ideas and compete in problem-solving. Furthermore, Halite is being used for recruitment of talent by its sponsors.</p>
+
+                <h3>Who is running the tournament?</h3>
+                <p>The Halite game has been designed and implemented by <a href="https://www.twosigma.com/">Two Sigma</a>, a highly-innovative, technological investment firm based in New York City.<br>The Halite tournament is jointly run with <a href="http://tech.cornell.edu/">Cornell Tech</a>, a new graduate school that brings together faculty, business leaders, tech entrepreneurs, and students in a catalytic environment to produce visionary results grounded in significant needs that will reinvent the way we live in the digital age.</p>
+
+                <h3>How long is the tournament?</h3>
+                <p>The tournament will run from November 2, 2016 to February 2, 2017.</p>
+
+                <h3>How are rankings computed?</h3>
+                <p>Rankings are based on the outcome of organized games where bots play against each other. A good analogy is the <a href="https://en.wikipedia.org/wiki/Elo_rating_system">Elo rating system</a> used for chess.<br>More precisely, rankings are computed using a Bayesian algorithm variant of the <a href="https://en.wikipedia.org/wiki/Glicko_rating_system">Glicko system</a>, specifically using the TrueSkill Python library available <a href="https://github.com/sublee/trueskill">here</a>.</p>
+
+                <h3>How are the winners decided?</h3>
+                <p>Winners are simply the highest ranked players on the <a href="https://2016.halite.io/leaderboard.php">leaderboard</a> at the end of the competition. So, submit early and often!</p>
+
+                <h3>Is there a prize for the winners?</h3>
+                <p>Pride! Bragging rights! Internet royalty!<br>The results of the competition will be officially announced with a link to best players Github profiles.</p>
+
+                <h3>What information do you store about me?</h3> 
+                <p>We store the email, username, and unique identifier that Github provides when you login to the halite.io website via Github OAuth.</p>
+
+                <h3>How do you determine my organization?</h3>
+                <p>We check to see if the domain of the email associated with your Github account is on our <a href="https://github.com/HaliteChallenge/Halite/blob/master/website/organizationWhitelist.txt">whitelist</a>.</p>
+                <p>Is your organization not on there? <a href="https://github.com/HaliteChallenge/Halite/edit/master/website/organizationWhitelist.txt">Edit the whitelist</a> and send us a pull request! We'll make sure to tag all members of your organization who have already signed up.</p>
+
+                <h2>Bot Programming</h2>
+
+                <h3>Do I need to be a programmer to play the game?</h3>
+                <p>Yes. Halite is a programming competition. You need to program a bot that will play the game in the Halite tournament.<br>However, you definitely don’t have to be a very good programmer to play Halite effectively. Success is more about coming up with a good strategy to play the game than coding this strategy expertly.</p>
+
+                <h3>What languages does the game support?</h3>
+                <p>Any and all! If the language can read from stdin and print to stdout, we can support it.<br>We provide out-of-the-box starter packages for the following languages: Python, Java and C++. See <a href="https://2016.halite.io/downloads.php">here</a> for our growing list of starter packages.<br>We’re counting on the community to add support for as many languages as people want. Visit <a href="https://2016.halite.io/advanced_writing_sp.php">this page</a> for more information on writing your own starter package and the protocol used by the game environment to talk to your bot.
+
+                <h3>How do I submit my bot?</h3>
+                <p>To submit your bot, you'll first need to zip your source code. Then, after signing in, click the "Submit" button on the top-right part of the page. Then, simply select your zipped source code to submit.</p>
+
+                <h2>The Code behind the Tournament</h2>
+
+                <h3>Is the code open source?</h3>
+                <p>Yes.<br>Check out our <a href="https://github.com/HaliteChallenge/Halite">Github repo</a> and you are also welcome (even encouraged) to open issues and/or submit pull requests.</p>
+
+                <h3>How do I contribute to the game and/or report an issue?</h3>
+                <p>You can open an issue or submit a pull request on our <a href="https://github.com/HaliteChallenge/Halite">Github Repo</a>. If you are looking for things to do, checkout our <a href="https://github.com/HaliteChallenge/Halite/issues">open issues</a>.</p>
+
+                <h2>Other</h2>
+
+                <h3>I cannot find an answer to my question, what do I do?</h3>
+                <p>Please check/post on the <a href="http://2016.forums.halite.io">Halite forums</a> or contact-us at <a href="mailto:halite@halite.io">halite@halite.io</a>.
+
+            </div>
+        </div>
+        
+
+<div align="center" style="bottom: 0; left: 0; right: 0; height: 50px;">
+  <hr/>
+  <a href="/terms_of_service.php">Terms of Service</a>
+|
+  <a href="/privacy_policy.php">Privacy Policy</a>
+</div>    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="script/backend.js"></script>
+    <script src="script/general.js"></script>
+</body>
+</html>

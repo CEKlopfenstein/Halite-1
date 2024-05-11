@@ -1,0 +1,312 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="UzLAOvN92N2iaw_7HcFXSOc_M-WIe3KFXaozuaNsZo4" />
+
+    <title>Game Servers</title>
+
+    <link href="lib/bootstrap.min.css" rel="stylesheet">
+    <link href="style/general.css" rel="stylesheet">
+    <link href="style/learn.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default" id="navvy">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" style="padding: 10px" href="index.php"><img src="assets/full_logo.png" style="height: 100%;"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right loggedOut" id="loginNav">
+                <ul class="nav navbar-nav">
+                    <li>
+  <a href="basics_quickstart.php">Learn</a>
+</li>
+<li>
+  <a href="downloads.php">Download</a>
+</li>
+<li>
+  <a href="leaderboard.php">Rankings</a>
+</li>
+<li>
+    <a href="local_visualizer.php">Visualize</a>
+</li>
+<li>
+  <a href="http://2016.forums.halite.io">Forums</a>
+</li>
+<li>
+  <a href="about.php">About</a>
+</li>                    <li>
+                      <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=2b713362b2f331e1dde3">Login with Github</a>
+                    </li>
+                </ul>
+            </ul>
+            <form id="submitForm">
+                <ul class="nav navbar-nav navbar-right loggedIn" id="logoutNav">
+                    <li>
+  <a href="basics_quickstart.php">Learn</a>
+</li>
+<li>
+  <a href="downloads.php">Download</a>
+</li>
+<li>
+  <a href="leaderboard.php">Rankings</a>
+</li>
+<li>
+    <a href="local_visualizer.php">Visualize</a>
+</li>
+<li>
+  <a href="http://2016.forums.halite.io">Forums</a>
+</li>
+<li>
+  <a href="about.php">About</a>
+</li>                                        <li><a href="#" id="submitButton">Submit</a><input type="file" id="myFile" name="botFile"></li>
+                                        <li><a href="#" id="logoutButton">Logout</a></li>
+                    <li><a href="associate.php">Associate</a></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div id="messageBox"></div>
+
+<div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="myModalLabel">Halite Submission Instructions</h1>
+            </div>
+            <div class="modal-body">
+                <h3>Name your main file <b>MyBot</b> with an appropriate file extension (e.g. MyBot.java).</h3>
+                <h3>Make sure that you aren't using stdout or stdin (print, cout, System.out.print, etc), which will cause your bot to fail. Instead, use <a href="advanced_development.php">a log file</a>.</h3>
+                <h3>Upload a <b>zip file</b> of your source code.</h3>
+                <h3>Once we have compiled your code, you will get an email notification.</h3>
+                <button id="submitModalButton" type="button" class="btn btn-primary">Submit!</button>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="row">
+            <style>
+    /* sidebar */
+    .bs-docs-sidebar {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .bs-docs-sidebar .nav>li>span {
+        color: #63ceca;
+    }
+
+    .bs-docs-sidebar .nav>li>span,
+    .bs-docs-sidebar .nav>li>a { border-left: 2px solid transparent;
+        padding: 4px 20px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    /* nested links */
+    .bs-docs-sidebar .nav .nav>li>a {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 30px;
+        font-size: 12px;
+    }
+
+    /* active & hover links */
+    .bs-docs-sidebar .nav>.active>a, 
+    .bs-docs-sidebar .nav>li>a:hover, 
+    .bs-docs-sidebar .nav>li>a:focus {
+        text-decoration: none;          
+        background-color: transparent;  
+    }
+
+    /* nested active links */
+    .bs-docs-sidebar .nav .nav>.active>a, 
+    .bs-docs-sidebar .nav .nav>.active:hover>a,
+    .bs-docs-sidebar .nav .nav>.active:focus>a {
+        font-weight: 700;
+        border-left-color: #63ceca; 
+        font-weight: 500;
+    }
+
+</style>
+
+<nav class="col-sm-3 bs-docs-sidebar">
+    <ul id="sidebar" class="nav nav-stacked">
+        <li class="">
+            <span>Basics</span>
+            <ul class="nav nav-stacked">
+                <li id="basics_quickstart">
+                    <a href="basics_quickstart.php">Getting Started</a>
+                </li>
+                <li id="basics_intro_halite">
+                    <a href="basics_intro_halite.php">Introducing Halite</a>
+                </li>
+                <li id="basics_improve_random">
+                    <a href="basics_improve_random.php">Improving the Random Bot</a>
+                </li>
+                <li id="basics_faqs">
+                    <a href="basics_faqs.php">FAQs</a>
+                </li>
+            </ul>
+        </li>
+        <li class="">
+            <span>Rules</span>
+            <ul class="nav nav-stacked">
+                <li id="rules_game">
+                    <a href="rules_game.php">Game Rules</a>
+                </li>
+                <li id="rules_contest">
+                    <a href="rules_contest.php">Contest Rules</a>
+                </li>
+            </ul>
+        </li>
+        <li class="">
+            <span>Advanced</span>
+            <ul class="nav nav-stacked">
+                <li id="advanced_development">
+                    <a href="advanced_development.php">Best Practices</a>
+                </li>
+                <li id="advanced_libraries">
+                    <a href="advanced_libraries.php">Submitting A Bot</a>
+                </li>
+                <li id="advanced_third_party">
+                    <a href="advanced_third_party.php">Third Party Resources</a>
+                </li>
+                <li id="advanced_writing_sp">
+                    <a href="advanced_writing_sp.php">Writing Your Own Starter Package</a>
+                </li>
+                <li id="advanced_command_line">
+                    <a href="advanced_command_line.php">Halite Environment CLI</a>
+                </li>
+                <li id="advanced_replay_file">
+                    <a href="advanced_replay_file.php">Replay Files</a>
+                </li>
+                <li id="advanced_game_server">
+                    <a href="advanced_game_server.php">Game Servers</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+    <p style="line-height: 1.5em; font-size: 13px;">You can <a id="githubLink" href="">edit this content on GitHub</a> and send us a pull request!</p>
+</nav>
+
+<script>
+    var fileName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+    document.getElementById("githubLink").href = "https://github.com/HaliteChallenge/Halite/blob/master/website/"+fileName;
+
+    var name = fileName.split(".")[0];
+    document.getElementById(name).className = "active";
+</script>
+            <div class="col-sm-9">
+
+                <h1>Game Servers</h1>
+
+                <h3>Hardware</h3>
+                <p>All compilation and game execution is done on AWS EC2 m3.medium servers running Ubuntu 16.04. They have the following specs:
+                    <ul>
+                        <li>3.5 GB of RAM</li>
+                        <li>~10 GB of disk space</li>
+                        <li>1 CPU</li>
+                    </ul>
+                </p>
+
+                <h3>Sandbox</h3>
+                <p>During compilation and games, players are run as unprivileged users in a sandbox which limits memory, processing power, execution time, disk space, and internet access. The sandbox is a docker container defined by this <a href="https://github.com/HaliteChallenge/Halite/blob/master/worker/Dockerfile">Dockerfile</a>, running on top of Docker 1.6.2. If you think that there is an issue with the sandbox, please email us at <a href="mailto:halite@halite.io">halite@halite.io</a></b>.
+
+                    <h3>Compilation</h3>
+                    <p>Bot compilation is done using <a href="https://github.com/HaliteChallenge/Halite/blob/master/worker/compiler.py">this autocompile script</a>.</p>
+                    <p>To facilitate the installation of custom software, we allow users to include an install script. If a file named <code>install.sh</code> exists in your submission, it is run as a bash script under the root user in a sandbox with internet access and 10 minutes of runtime. Bots may only read and write to their current directory, so all files that you want to be available at runtime must be installed locally. For more on using 3rd party libraries, click <a href="advanced_libraries.php">here</a>.</p>
+                    <p>
+                        Your main file must be called <code>MyBot</code>. Your language is recognized using the file extension of your <code>MyBot</code> file. The appropriate file extensions for each language are:
+                        <ul>
+                            <li>Java - .java</li>
+                            <li>Python - .py</li>
+                            <li>C++ - .cpp and .h(pp)</li>
+                            <li>C# - .cs</li>
+                            <li>Rust - .toml (for your Cargo.toml) and .rs (for your Rust source)</li>
+                            <li>Scala - .scala</li>
+                            <li>Ruby - .rb</li>
+                            <li>Go - .go</li>
+                            <li>PHP - .php</li>
+                            <li>JavaScript - .js</li>
+                            <li>OCaml - .ml</li>
+                            <li>Clojure - .clj</li>
+                            <li>C - .c</li>
+                            <li>Julia - .jl</li>
+                        </ul>
+                    </p>
+
+                    <p>
+                        The following compilers are used:
+                        <ul>
+                            <li>Java - javac 1.8.0_111</li>
+                            <li>C++ - g++ 4.8</li>
+                            <li>C# - mcs 4.6.1.0</li>
+                            <li>Rust - rustc 1.10.0</li>
+                            <li>Scala - scalac 2.10.4</li>
+                            <li>C - gcc 4.8</li>
+                        </ul>
+                    </p>
+
+                    <p>
+                        The following build automators are used:
+                        <ul>
+                            <li>Rust - cargo 0.11.0</li>
+                            <li>Clojure - lein 2.7.0</li>
+                        </ul>
+                    </p>
+
+                    <p>
+                        The following versions of each language are supported:
+                        <ul>
+                            <li>Java 8</li>
+                            <li>Python 3.4.3</li>
+                            <li>C++ 11</li>
+                            <li>C# 6.0</li>
+                            <li>Rust 1.10</li>
+                            <li>Scala 2.10.4</li>
+                            <li>Ruby 2.3.1</li>
+                            <li>Go 1.6</li>
+                            <li>PHP 7.0</li>
+                            <li>Node.js (JavaScript) 7.1.0</li>
+                            <li>OCaml 4.01.0</li>
+                            <li>Clojure 1.8.0</li>
+                            <li>Julia 0.5.0</li>
+                        </ul>
+                    </p>
+
+                    <h3>Games</h3>
+                    <p>Bots are given <b>250 MB of RAM</b> and <b>equal amounts of CPU</b>.</p>
+                    <p>Currently, 20x20, 25x25, 30x30, 35x35, 40x40, 45x45, and 50x50 games are run. Games may be 2-6 player.</p>
+                    <p>Games are always run using <a href="downloads.php">the most recent environment build</a>.</p>
+                </p>
+            </div>
+        </div>
+        
+
+<div align="center" style="bottom: 0; left: 0; right: 0; height: 50px;">
+  <hr/>
+  <a href="/terms_of_service.php">Terms of Service</a>
+|
+  <a href="/privacy_policy.php">Privacy Policy</a>
+</div>    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="script/backend.js"></script>
+    <script src="script/general.js"></script>
+
+</body>
+</html>

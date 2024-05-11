@@ -1,0 +1,316 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="UzLAOvN92N2iaw_7HcFXSOc_M-WIe3KFXaozuaNsZo4" />
+
+
+   <title>Game Rules</title>
+
+    <link href="lib/bootstrap.min.css" rel="stylesheet">
+    <link href="style/general.css" rel="stylesheet">
+    <link href="style/learn.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default" id="navvy">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" style="padding: 10px" href="index.php"><img src="assets/full_logo.png" style="height: 100%;"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right loggedOut" id="loginNav">
+                <ul class="nav navbar-nav">
+                    <li>
+  <a href="basics_quickstart.php">Learn</a>
+</li>
+<li>
+  <a href="downloads.php">Download</a>
+</li>
+<li>
+  <a href="leaderboard.php">Rankings</a>
+</li>
+<li>
+    <a href="local_visualizer.php">Visualize</a>
+</li>
+<li>
+  <a href="http://2016.forums.halite.io">Forums</a>
+</li>
+<li>
+  <a href="about.php">About</a>
+</li>                    <li>
+                      <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=2b713362b2f331e1dde3">Login with Github</a>
+                    </li>
+                </ul>
+            </ul>
+            <form id="submitForm">
+                <ul class="nav navbar-nav navbar-right loggedIn" id="logoutNav">
+                    <li>
+  <a href="basics_quickstart.php">Learn</a>
+</li>
+<li>
+  <a href="downloads.php">Download</a>
+</li>
+<li>
+  <a href="leaderboard.php">Rankings</a>
+</li>
+<li>
+    <a href="local_visualizer.php">Visualize</a>
+</li>
+<li>
+  <a href="http://2016.forums.halite.io">Forums</a>
+</li>
+<li>
+  <a href="about.php">About</a>
+</li>                                        <li><a href="#" id="submitButton">Submit</a><input type="file" id="myFile" name="botFile"></li>
+                                        <li><a href="#" id="logoutButton">Logout</a></li>
+                    <li><a href="associate.php">Associate</a></li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div id="messageBox"></div>
+
+<div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="myModalLabel">Halite Submission Instructions</h1>
+            </div>
+            <div class="modal-body">
+                <h3>Name your main file <b>MyBot</b> with an appropriate file extension (e.g. MyBot.java).</h3>
+                <h3>Make sure that you aren't using stdout or stdin (print, cout, System.out.print, etc), which will cause your bot to fail. Instead, use <a href="advanced_development.php">a log file</a>.</h3>
+                <h3>Upload a <b>zip file</b> of your source code.</h3>
+                <h3>Once we have compiled your code, you will get an email notification.</h3>
+                <button id="submitModalButton" type="button" class="btn btn-primary">Submit!</button>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="row">
+            <style>
+    /* sidebar */
+    .bs-docs-sidebar {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .bs-docs-sidebar .nav>li>span {
+        color: #63ceca;
+    }
+
+    .bs-docs-sidebar .nav>li>span,
+    .bs-docs-sidebar .nav>li>a { border-left: 2px solid transparent;
+        padding: 4px 20px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    /* nested links */
+    .bs-docs-sidebar .nav .nav>li>a {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 30px;
+        font-size: 12px;
+    }
+
+    /* active & hover links */
+    .bs-docs-sidebar .nav>.active>a, 
+    .bs-docs-sidebar .nav>li>a:hover, 
+    .bs-docs-sidebar .nav>li>a:focus {
+        text-decoration: none;          
+        background-color: transparent;  
+    }
+
+    /* nested active links */
+    .bs-docs-sidebar .nav .nav>.active>a, 
+    .bs-docs-sidebar .nav .nav>.active:hover>a,
+    .bs-docs-sidebar .nav .nav>.active:focus>a {
+        font-weight: 700;
+        border-left-color: #63ceca; 
+        font-weight: 500;
+    }
+
+</style>
+
+<nav class="col-sm-3 bs-docs-sidebar">
+    <ul id="sidebar" class="nav nav-stacked">
+        <li class="">
+            <span>Basics</span>
+            <ul class="nav nav-stacked">
+                <li id="basics_quickstart">
+                    <a href="basics_quickstart.php">Getting Started</a>
+                </li>
+                <li id="basics_intro_halite">
+                    <a href="basics_intro_halite.php">Introducing Halite</a>
+                </li>
+                <li id="basics_improve_random">
+                    <a href="basics_improve_random.php">Improving the Random Bot</a>
+                </li>
+                <li id="basics_faqs">
+                    <a href="basics_faqs.php">FAQs</a>
+                </li>
+            </ul>
+        </li>
+        <li class="">
+            <span>Rules</span>
+            <ul class="nav nav-stacked">
+                <li id="rules_game">
+                    <a href="rules_game.php">Game Rules</a>
+                </li>
+                <li id="rules_contest">
+                    <a href="rules_contest.php">Contest Rules</a>
+                </li>
+            </ul>
+        </li>
+        <li class="">
+            <span>Advanced</span>
+            <ul class="nav nav-stacked">
+                <li id="advanced_development">
+                    <a href="advanced_development.php">Best Practices</a>
+                </li>
+                <li id="advanced_libraries">
+                    <a href="advanced_libraries.php">Submitting A Bot</a>
+                </li>
+                <li id="advanced_third_party">
+                    <a href="advanced_third_party.php">Third Party Resources</a>
+                </li>
+                <li id="advanced_writing_sp">
+                    <a href="advanced_writing_sp.php">Writing Your Own Starter Package</a>
+                </li>
+                <li id="advanced_command_line">
+                    <a href="advanced_command_line.php">Halite Environment CLI</a>
+                </li>
+                <li id="advanced_replay_file">
+                    <a href="advanced_replay_file.php">Replay Files</a>
+                </li>
+                <li id="advanced_game_server">
+                    <a href="advanced_game_server.php">Game Servers</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <hr>
+    <p style="line-height: 1.5em; font-size: 13px;">You can <a id="githubLink" href="">edit this content on GitHub</a> and send us a pull request!</p>
+</nav>
+
+<script>
+    var fileName = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+    document.getElementById("githubLink").href = "https://github.com/HaliteChallenge/Halite/blob/master/website/"+fileName;
+
+    var name = fileName.split(".")[0];
+    document.getElementById(name).className = "active";
+</script>
+            <div class="col-sm-9">
+                <h1>Game Rules</h1>
+
+                <h3>Overview</h3>
+
+                <p>This guide gives a detailed description of how the precise rules of the Halite game work. It is highly recommended that you have already read <a href="basics_intro_halite.php">"Introducing Halite"</a> before reading this document.</p>
+
+                <h3>The Game</h3>
+
+                <p>During a move, every piece you control can be given one of five moves: to move NORTH, EAST, SOUTH, WEST, or to remain STILL. When a piece move STILL for a turn, it will permanently increase its Strength by the Production of the tile it sits on.</p>
+
+                <p>Players gain pieces by simply moving their own pieces over Sites on the map. When a piece moves off of a Site, it leaves behind a piece with an identical Owner and with a Strength of 0, in doing so expanding the size of their territory.</p>
+
+                <p>When pieces from the same player try to occupy the same site, the resultant piece has the sum of their strengths. Strengths are capped at 255, so if two pieces with a strength of 150 were to both attempt to occupy the same square, the resultant piece would still have a strength of 255.</p>
+
+                <div class="text-center" style="margin-bottom: 18px;"><img src="assets/combination.png" style="max-width: 500px;"></div>
+
+                <p>When pieces from opposing players try to occupy either the same or cardinally adjacent sites (diagonals are not included), the battle will be resolved according to the relative strengths of the pieces, as each piece decreases the strength of every adjacent or coinciding opposing piece by its own strength. Pieces with a strength of 0 or less are removed from the game, excepting pieces with a strength of 0 which have not engaged in combat during that turn.</p>
+
+                <div class="text-center" style="margin-bottom: 18px;"><img src="assets/overkill-2.png" style="max-width: 500px;"></div>
+
+                <p>Notice how in the above example, the pieces combined prior to fighting.</p>
+
+                <p>Because a piece damages all adjacent enemy pieces, if a piece is killed while attacking multiple pieces, it will output (often significantly) more damage than it had strength. This is referred to as "overkill" and means that bots can use their pieces tactically to their own advantage. This is shown in the below examples:</p>
+
+                <div class="text-center" style="margin-bottom: 18px;"><img src="assets/overkill-1.png" style="max-width: 500px;"></div>
+
+                <p>The map is initialized by the environment to have productions and strengths. Combat with map squares works identically to combat with other players except only applies on that square; empty map squares neither apply damage to nor take damage from adjacent squares.</p>
+
+                <p>Players should note that the map does wrap around; if a piece at the top of the map moves North, it will reappear on the bottom of the map, and pieces on the top and bottom of the map will engage in combat (provided that they are in the same column).</p>
+
+                <p>The origin of the map (the point at coordinates (0, 0)) is the north west (top left) corner of the map.</p>
+
+                <p>Players are scored according to the reverse of the order in which they are destroyed. The player last standing wins, whereas the player which was destroyed first comes in last. Bots are scored relatively; in a game with many players it is far better to come in second than to come in last.</p>
+
+                <p>The game ends if one of two conditions are met:
+                    <ul>
+                        <li>Only one player has any pieces left.</li>
+                        <li>10 * sqrt(WIDTH * HEIGHT) turns have been played. Consequently, a small map may end after a few hundred turns, whereas a large map could take thousands.</li>
+                    </ul>
+                </p>
+
+                <p>The maximum number of turns is generally high enough that only the best-matched of bots will reach the turn limit; the majority of games will end before the turn limit is reached. In the event that the turn limit is reached or multiple bots are destroyed on the same turn, they are ranked based on their territory at that point in the game. If there is a tie in the amount of territory each bot possesses, the full territory integral is used as the tiebreaker, although this is a rare occurence.</p>
+
+                <h3>Bot Initialization</h3>
+
+                <p>At the start of the game, each bot is sent some information (accessed using getInit in the starter packages):
+                    <ul>
+                        <li>Their own tag within the map - that is, which player they are.</li>
+                        <li>The initial map state.</li>
+                    </ul>
+                </p>
+
+                <p>Bots are permitted to use time at the beginning of the game to initialize. This initialization might include (but is in no way limited to) getting the initial map and player tag, identifying important, high-production regions on the map, identifying the locations of neighboring players, planning the bot's initial expansion strategy, and/or compiling a model. Once bots are done initializing (before their time is up), they should send a response (sendInit in the starter packages) with their own player name, used for human identification purposes.</p>
+
+                <h3>Turns</h3>
+
+                <p>After all bots have finished setting up, the environment will do the following until endgame conditions are met.</p>
+                    <ol>
+                        <li>Send the present gamestate - map and messages - to all players.</li>
+                        <li>Receive moves from the players.</li>
+                        <li>Kill bots whose responses take longer than their remaining allotted time.</li>
+                        <li>Add strength to pieces which choose to remain where they are.</li>
+                        <li>Simultaneously move (and combine if necessary) all player's pieces. The capping of strengths to 255 occurs here.</li>
+                        <li>Simultaneously damage (and remove if damage equals or exceeds strength) all player's pieces. All pieces will output damage equivalent to their strength when starting this phase, and the damage will apply to all coinciding or adjacent enemy squares.</li>
+                        <li>Check if endgame conditions have been met.</li>
+                    </ol>
+                <p>One should note that because all pieces damage all adjacent enemy pieces, if a piece is killed while attacking multiple pieces, it will output (often significantly) more damage than it had strength. This is referred to as "overkill" and means that bots can use their pieces tactically to their own advantage.</p>
+
+                <h3>Timeouts</h3>
+
+                <p>Bots are given 15 seconds to initialize and 1 second for every subsequent turn. Every bot's clock starts ticking once the environment sends its message (be it initialization or frame) to the bot and resets once the environment receives the newline character marking the end of the bot's response. If a bot's clock hits zero, it is ejected from the game and deemed to have lost. It's pieces become part of the map.</p>
+
+                <h3>Maps</h3>
+
+                <p>Maps are randomly generated at the start of each game. The generator does the following:
+                    <ol>
+                        <li>Tries to match the given width and height as closely as it can while still creating a symmetric map. Maps are guaranteed to be the given size or smaller in each dimension; never larger.</li>
+                        <li>Tries to create interesting maps in which there are patches of high production squares and patches of low production squares, with fairly low noise on the small scale.</li>
+                        <li>Always creates symmetric maps. Specifically, the generator generates a chunk of the map and then tesselates, reflects, and shifts it to produce the entire map.</li>
+                    </ol>
+                </p>
+
+                <h3>Replay Files</h3>
+
+                <p>Once a game ends, the environment will output a replay file. See <a href="advanced_replay_file.php">here</a> for more information regarding the replay file format.</p>
+
+            </div>
+        </div>
+        
+
+<div align="center" style="bottom: 0; left: 0; right: 0; height: 50px;">
+  <hr/>
+  <a href="/terms_of_service.php">Terms of Service</a>
+|
+  <a href="/privacy_policy.php">Privacy Policy</a>
+</div>    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="script/backend.js"></script>
+    <script src="script/general.js"></script>
+</body>
+</html>
