@@ -2,7 +2,9 @@
 
 <div align="center" style="bottom: 0; left: 0; right: 0; height: 50px;">
   <hr/>
-  <a href="/terms_of_service.php">Terms of Service</a>
+  This is a reproduction.
 |
-  <a href="/privacy_policy.php">Privacy Policy</a>
+  <a href="https://web.archive.org/web/20220418080915/https://2016.halite.io/">Original Site Available Here</a>
+|
+<a href="https://github.com/CEKlopfenstein/Halite-1/">Reproduction Github</a>
 </div>
