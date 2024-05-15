@@ -34,20 +34,11 @@
   <a href="downloads.php">Download</a>
 </li>
 <li>
-  <a href="leaderboard.php">Rankings</a>
-</li>
-<li>
-    <a href="local_visualizer.php">Visualize</a>
-</li>
-<li>
-  <a href="http://2016.forums.halite.io">Forums</a>
+  <a href="https://web.archive.org/web/http://2016.forums.halite.io">Forums</a>
 </li>
 <li>
   <a href="about.php">About</a>
-</li>                    <li>
-                      <a href="https://github.com/login/oauth/authorize?scope=user:email&client_id=2b713362b2f331e1dde3">Login with Github</a>
-                    </li>
-                </ul>
+</li>                </ul>
             </ul>
             <form id="submitForm">
                 <ul class="nav navbar-nav navbar-right loggedIn" id="logoutNav">
@@ -58,13 +49,7 @@
   <a href="downloads.php">Download</a>
 </li>
 <li>
-  <a href="leaderboard.php">Rankings</a>
-</li>
-<li>
-    <a href="local_visualizer.php">Visualize</a>
-</li>
-<li>
-  <a href="http://2016.forums.halite.io">Forums</a>
+  <a href="https://web.archive.org/web/http://2016.forums.halite.io">Forums</a>
 </li>
 <li>
   <a href="about.php">About</a>
@@ -235,7 +220,7 @@
                 <p>It may be up to <b>10 minutes</b> before your bot has played a few games. In the meantime, move onto <a href="basics_intro_halite.php">Introducing Halite</a>.</p>
 
                 <h3>Join the Community</h3>
-                <p>If you need help or have feedback, please visit the <a href="http://2016.forums.halite.io/">forums</a>! If you’d like to hang out and chat with other players, come join the <a href="https://discordapp.com/invite/rbVDB4n">official discord</a>.</p>
+                <p>If you need help or have feedback, please visit the <a href="https://web.archive.org/web/http://2016.forums.halite.io/">forums</a>! If you’d like to hang out and chat with other players, come join the <a href="https://discordapp.com/invite/rbVDB4n">official discord</a>.</p>
 
             </div>
         </div>
@@ -243,9 +228,11 @@
 
 <div align="center" style="bottom: 0; left: 0; right: 0; height: 50px;">
   <hr/>
-  <a href="/terms_of_service.php">Terms of Service</a>
+  This is a reproduction.
 |
-  <a href="/privacy_policy.php">Privacy Policy</a>
+  <a href="https://web.archive.org/web/20220418080915/https://2016.halite.io/">Original Site Available Here</a>
+|
+<a href="https://github.com/CEKlopfenstein/Halite-1/">Reproduction Github</a>
 </div>    </div>
 
 
